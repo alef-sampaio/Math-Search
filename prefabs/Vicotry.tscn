@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=3 uid="uid://bhujnndfqnw6f"]
+
+[ext_resource type="FontFile" uid="uid://dj86d7yghuyte" path="res://Assets/fonts/RevMiniPixel.ttf" id="1_bqs34"]
+[ext_resource type="Script" uid="uid://2x3tw3wqwvew" path="res://Scripts/vicotry.gd" id="1_lxdkw"]
+[ext_resource type="Theme" uid="uid://cvmfpysjpenxu" path="res://defalt_bnt.tres" id="3_1ecq5"]
+[ext_resource type="Texture2D" uid="uid://chjqybfisvep6" path="res://Assets/Sprite Pack 3/5 - Geralt/Jumping (32 x 32).png" id="4_faeqr"]
+[ext_resource type="Texture2D" uid="uid://cqtvbwupgwvtt" path="res://Assets/Sprite Pack 3/4 - Tommy/Holding_Object_Standing (32 x 32).png" id="5_ipgu8"]
+[ext_resource type="Texture2D" uid="uid://c061a5akcw2qm" path="res://Assets/Sprite Pack 3/Free King Sprite/King_Sprite.png" id="6_3fk8t"]
+[ext_resource type="Texture2D" uid="uid://lcru1m3fnf45" path="res://Assets/Sprite Pack 3/1 - Gum Bot/Screen-off (32 x 32).png" id="7_i4yui"]
+[ext_resource type="Texture2D" uid="uid://cj5t2cs5utspp" path="res://Assets/Sprite Pack 3/7 - Rocket Cherry/Flying (16 x 32).png" id="8_ahyvh"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_lxdkw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.17551985, 0.3236257, 0.036618933, 1)
+
+[node name="Vitoria" type="Label" parent="."]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 56.0
+offset_right = 360.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("1_bqs34")
+text = "VOCÊ VENCEU!!!"
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 175.0
+offset_right = 357.0
+offset_bottom = 206.0
+theme = ExtResource("3_1ecq5")
+theme_override_fonts/font = ExtResource("1_bqs34")
+text = "RESTART GAME"
+
+[node name="Quit_game" type="Button" parent="."]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 232.0
+offset_right = 345.0
+offset_bottom = 263.0
+theme = ExtResource("3_1ecq5")
+theme_override_fonts/font = ExtResource("1_bqs34")
+text = "QUIT GAME"
+
+[node name="Jumping(32X32)" type="Sprite2D" parent="."]
+position = Vector2(88, 120)
+texture = ExtResource("4_faeqr")
+
+[node name="HoldingObjectStanding(32X32)" type="Sprite2D" parent="."]
+position = Vector2(288, 128)
+texture = ExtResource("5_ipgu8")
+
+[node name="KingSprite" type="Sprite2D" parent="."]
+position = Vector2(480, 104)
+texture = ExtResource("6_3fk8t")
+region_enabled = true
+region_rect = Rect2(36, 0, 24, 32)
+
+[node name="ScreenOff(32X32)" type="Sprite2D" parent="."]
+position = Vector2(112, 176)
+texture = ExtResource("7_i4yui")
+
+[node name="Flying(16X32)" type="Sprite2D" parent="."]
+position = Vector2(472, 192)
+texture = ExtResource("8_ahyvh")
+region_enabled = true
+region_rect = Rect2(0, 4, 16, 28)
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Quit_game" to="." method="_on_quit_game_pressed"]

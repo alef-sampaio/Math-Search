@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://buhl0xey1dfuv"]
+
+[ext_resource type="AudioStream" uid="uid://bcrs76a05vndk" path="res://sounds/enemy_hit.mp3" id="1_2li55"]
+
+[node name="hit_enemy" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_2li55")
+volume_db = -7.0

@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://cm18njfwvfkvs"]
+
+[ext_resource type="Script" uid="uid://c43l2eduw486f" path="res://Scripts/fase_3_1.gd" id="1_cgouf"]
+[ext_resource type="Texture2D" uid="uid://b46rewe67dhsm" path="res://Assets/Seasonal Tilesets/Mini FX, Items & UI/Numbers/Number7 7x10.png" id="2_at35a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_15wru"]
+radius = 9.055386
+
+[sub_resource type="Animation" id="Animation_b3wvb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bnsmo"]
+resource_name = "float"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -3), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cnojs"]
+_data = {
+&"RESET": SubResource("Animation_b3wvb"),
+&"float": SubResource("Animation_bnsmo")
+}
+
+[node name="Fase3_1" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_cgouf")
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_at35a")
+
+[node name="colision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_15wru")
+
+[node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cnojs")
+}
+autoplay = "float"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

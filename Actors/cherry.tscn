@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://d1bbv64e4aoe0"]
+
+[ext_resource type="Script" uid="uid://keuf4lgmen6w" path="res://Scripts/cherry.gd" id="1_a7fft"]
+[ext_resource type="Texture2D" uid="uid://cjrm5o7msook1" path="res://Assets/Sprite Pack 3/7 - Rocket Cherry/Hopping (16 x 32).png" id="1_b2xjr"]
+[ext_resource type="Texture2D" uid="uid://ba5gxnxhpyw7u" path="res://Assets/Sprite Pack 3/7 - Rocket Cherry/Hurt (16 x 32).png" id="2_7j1rc"]
+[ext_resource type="PackedScene" uid="uid://beojboybtr518" path="res://prefabs/hitbox.tscn" id="4_6htne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7fft"]
+size = Vector2(16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6htne"]
+atlas = ExtResource("1_b2xjr")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsq6i"]
+atlas = ExtResource("1_b2xjr")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u64d4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6htne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsq6i")
+}],
+"loop": true,
+"name": &"hopping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7j1rc")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsq6i"]
+size = Vector2(14, 6.5)
+
+[node name="cherry" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_a7fft")
+enemy_score = 50
+
+[node name="colision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_a7fft")
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u64d4")
+animation = &"hopping"
+autoplay = "hopping"
+
+[node name="hitbox" parent="." instance=ExtResource("4_6htne")]
+
+[node name="colision" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, 3.25)
+shape = SubResource("RectangleShape2D_lsq6i")

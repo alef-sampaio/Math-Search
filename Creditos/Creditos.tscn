@@ -1,0 +1,109 @@
+[gd_scene load_steps=3 format=3 uid="uid://cckxkvu1uujl2"]
+
+[ext_resource type="Script" uid="uid://cp7aw453i587b" path="res://Creditos/Creditos.gd" id="1_kwuv3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfvq6"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Scroll" type="ScrollContainer" node_paths=PackedStringArray("text_node")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nfvq6")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("1_kwuv3")
+text_node = NodePath("Margin/Label")
+credits_time = 35.0
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Label" type="RichTextLabel" parent="Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[center]
+[b][u]CRÉDITOS[/u][/b]
+
+[b][u]Equipe de Desenvolvimento[/u][/b]  
+[b]Diretor Criativo & Programador Principal:[/b] João Marcelo Ferreira Santos  
+[b]Programadores:[/b] Alef, Francisco José  
+[b]Game Designer & Roteiro:[/b] João Marcelo Ferreira Santos  
+[b]Artista / Designer Visual:[/b] Alef  
+[b]Animador / Efeitos Visuais:[/b] Francisco José  
+
+[b][u]Música e Som[/u][/b]  
+[b]Compositor e Edição de Som:[/b] João Marcelo Ferreira Santos  
+
+[b][u]Produção[/u][/b]  
+[b]Coordenador de Projeto:[/b] Alef  
+[b]Gestão de Atividades:[/b] Francisco José  
+
+[b][u]Testadores[/u][/b]  
+[b]Equipe de Testes:[/b] João Marcelo Ferreira Santos, Alef, Francisco José  
+
+[b][u]Agradecimentos Especiais[/u][/b]  
+- Professores e colegas da faculdade que apoiaram o projeto  
+- Familiares que incentivaram nossos estudos e criatividade  
+- Comunidade do [i]Godot Engine[/i] e recursos online educativos  
+
+[b][u]Ferramentas Utilizadas[/u][/b]  
+[b]Engine:[/b] Godot Engine 4.5  
+[b]Linguagem de Programação:[/b] GDScript  
+[b]Ferramentas Gráficas:[/b] Krita, Blender  
+[b]Edição de Som:[/b] Audacity, FL Studio  
+
+[b][u]Mensagem Final[/u][/b]  
+[i]Este jogo foi criado como projeto estudantil e exercício de aprendizado em desenvolvimento de jogos.[/i]  
+Agradecemos a todos que nos apoiaram durante essa jornada!  
+
+[b]Muito obrigado por jogar e por apoiar nosso projeto![/b]
+[/center]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OBRIGADO POR JOGAR!!!"
+fit_content = true

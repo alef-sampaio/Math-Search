@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsapwpun74ik2"]
+
+[ext_resource type="Script" uid="uid://cvi3vjt4ap8bp" path="res://Scripts/tela_de_fases.gd" id="1_6yi8g"]
+[ext_resource type="Texture2D" uid="uid://dulvgd0tpa7db" path="res://Assets/Seasonal Tilesets/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" id="1_jkwmw"]
+[ext_resource type="Texture2D" uid="uid://cf7aj1ttwaet3" path="res://Assets/Seasonal Tilesets/3 - Tropics/Background parts/_Complete_static_BG_(288 x 208).png" id="2_6csjd"]
+[ext_resource type="Texture2D" uid="uid://bcmp6ya1dtx8y" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/_Complete_static_BG_(288 x 208).png" id="3_wqqq5"]
+[ext_resource type="Texture2D" uid="uid://wyi2c6tdj3e7" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/_Complete_static_BG_(288 x 208).png" id="4_bg7mf"]
+
+[node name="Seletor de fases" type="Control"]
+layout_mode = 3
+anchor_right = 1.12969
+anchor_bottom = 1.64688
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6yi8g")
+metadata/_edit_use_anchors_ = true
+
+[node name="Center" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Preview" type="TextureRect" parent="Center"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Name" type="Label" parent="Center"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Buttons" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Grassland" type="TextureButton" parent="Buttons"]
+layout_mode = 1
+offset_left = 37.0
+offset_top = 32.0
+offset_right = 325.0
+offset_bottom = 240.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("1_jkwmw")
+
+[node name="Tropical" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 33.0
+offset_right = 714.0
+offset_bottom = 241.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("2_6csjd")
+
+[node name="Autumn" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 175.0
+offset_right = 325.0
+offset_bottom = 383.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("3_wqqq5")
+
+[node name="Winter" type="TextureButton" parent="Buttons"]
+layout_mode = 1
+offset_left = 424.0
+offset_top = 179.0
+offset_right = 712.0
+offset_bottom = 387.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("4_bg7mf")

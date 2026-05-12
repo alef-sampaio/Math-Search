@@ -1,0 +1,112 @@
+[gd_scene load_steps=3 format=3 uid="uid://cckxkvu1uujl2"]
+
+[ext_resource type="Script" uid="uid://cp7aw453i587b" path="res://Video-4-Animacao-e-Transicao/Creditos/Creditos.gd" id="1_kwuv3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfvq6"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Scroll" type="ScrollContainer" node_paths=PackedStringArray("text_node")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nfvq6")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("1_kwuv3")
+text_node = NodePath("Margin/Label")
+credits_time = 35.0
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="RichTextLabel" parent="Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[center]
+[b][u]CRÉDITOS[/u][/b]
+
+[b][u]Equipe de Desenvolvimento[/u][/b]  
+[b]Diretor Criativo:[/b] João da Silva  
+[b]Lead Developer:[/b] Ana Clara Martins  
+[b]Game Designer:[/b] Maria Oliveira  
+[b]Programadores:[/b]  
+- Carlos Eduardo  
+- Fernanda Andrade  
+- Gabriel Tavares  
+[b]Artistas:[/b]  
+- [i]2D:[/i] Ana Beatriz, Lucas Fernandes  
+- [i]3D:[/i] Pedro Henrique, Sofia Alves  
+[b]Animadores:[/b] Júlia Pereira, Leonardo Santiago  
+
+[b][u]Música e Som[/u][/b]  
+[b]Diretor Musical:[/b] Rafael Souza  
+[b]Compositores:[/b]  
+- Rafael Souza  
+- Carolina Mendes  
+[b]Designer de Áudio:[/b] Larissa Ferreira  
+[b]Edição de Som:[/b] Bruno Rocha  
+
+[b][u]Produção[/u][/b]  
+[b]Produtor Executivo:[/b] Rodrigo Nascimento  
+[b]Gerente de Projeto:[/b] Amanda Rodrigues  
+[b]Coordenador de Equipe:[/b] Marcos Lima  
+
+[b][u]Testadores[/u][/b]  
+[b]Testadores Líderes:[/b]  
+- Gabriel Santos  
+- Fernanda Costa  
+[b]Equipe de Testes:[/b]  
+- Lucas Rocha  
+- Beatriz Souza  
+- Felipe Cardoso  
+- Tatiane Ribeiro  
+
+[b][u]Agradecimentos Especiais[/u][/b]  
+- Comunidade do [i]Godot Engine[/i]  
+- [i]Plataforma de Crowdfunding X[/i] e todos os nossos apoiadores:  
+  - João Pereira  
+  - Camila Nunes  
+  - Daniel Matos  
+  - e muitos outros!  
+- Professores, mentores e amigos que inspiraram este projeto.  
+- Aos nossos familiares, que sempre apoiaram nossos sonhos.  
+
+[b][u]Ferramentas Utilizadas[/u][/b]  
+[b]Engine:[/b] Godot Engine  
+[b]Linguagem de Programação:[/b] GDScript e C#  
+[b]Ferramentas Gráficas:[/b]  
+- Krita  
+- Blender  
+- Inkscape  
+[b]Edição de Som:[/b] Audacity, FL Studio  
+[b]Testes de Jogo:[/b] Open Broadcast Software, Unity Recorder  
+
+[b][u]Parceiros Fictícios[/u][/b]  
+- [i]Estúdio Lunar[/i]  
+- [i]Edição Estrela[/i]  
+- [i]Produtora Pioneira[/i]  
+
+[b][u]Tecnologias Suportadas[/u][/b]  
+[b]Plataformas:[/b]  
+- Windows  
+- macOS  
+- Linux  
+- Android  
+- iOS  
+[b]Resoluções:[/b]  
+- 720p  
+- 1080p  
+- 1440p  
+- 4K  
+
+[b][u]Mensagem Final[/u][/b]  
+[i]Este projeto é fictício e foi criado exclusivamente para demonstração de uma tela de créditos.[/i]  
+Agradecemos a todos que participaram deste exercício criativo!  
+
+[b]Muito obrigado por assistir e por apoiar nossos projetos![/b]
+[/center]"
+fit_content = true
