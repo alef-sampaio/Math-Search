@@ -14,6 +14,6 @@ Ajudar crianças a compreenderem o conceito de números primos por meio de desaf
 ## Status
 Completo e disponivel na versão mais recente
 
-##Colaboradores
+## Colaboradores
 
 https://github.com/alef-sampaio
