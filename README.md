@@ -1,4 +1,4 @@
-# Math-Seach
+# Math-Search
 Jogo educativo de plataforma para ensinar números primos a crianças.
 ## Objetivo
 
