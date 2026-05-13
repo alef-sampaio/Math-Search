@@ -11,6 +11,30 @@ Ajudar crianças a compreenderem o conceito de números primos por meio de desaf
 - Desenvolvimento de jogos 2D
 - Lógica de programação
 
+## Funcionalidades
+
+- Mecânica de plataforma 2D
+- Ensino de números primos por meio de desafios
+- Sistema de fases
+- Interface voltada para crianças
+- Versão jogável para Windows
+
+## Controles
+
+- Setas ou A/D: mover personagem OU
+- Espaço: pular
+- Tecla "i" para iniciar diálogo
+- Tecla "o" para pular diálogo
+
+## Status do projeto
+
+Completo!
+
+## Aprendizados
+
+Durante o desenvolvimento do Math Search, foram aplicados conceitos de lógica de programação, organização de cenas no Godot, criação de mecânicas de jogo e desenvolvimento de uma proposta educativa baseada em gamificação.
+
+
 ## Como baixar e jogar
 
 O **Math Search** está disponível para Windows por meio da aba de releases do repositório.
