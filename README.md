@@ -52,6 +52,6 @@ Math.Search.exe
 **Math Search** é um jogo educativo de plataforma desenvolvido para ensinar crianças sobre números primos de forma interativa e divertida.
 
 
-## Colaboradores
+## Colaborador(es)
 
 https://github.com/alef-sampaio
